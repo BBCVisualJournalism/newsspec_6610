@@ -1,0 +1,151 @@
+$anchor-active: #f00;
+
+@import "news_special/defaults";
+
+h1 {
+	color: #555;
+	font-size: 1.1em;
+	margin-bottom: .3em;
+}
+h2 {
+	color: #555;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+h3 {
+	color: #555;
+	font-size: .8em;
+	margin-bottom: .6em;
+}
+	.container {
+		position: relative;
+		z-index: -100;
+		margin-top: -130px;
+		img {
+			display: block;
+			width: 100%;
+		}
+		.fallback {
+			display: none;
+			width: 600px;
+		}
+		svg {
+			display: none;
+		}
+	}
+.london {
+	position: absolute;
+	top: 240px;
+}
+ul, ol {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+		color: #555;
+		font-size: .8em;
+		margin-bottom: .5em;
+		strong {
+			float: right;
+			margin-right: 90px;
+		}
+	}
+	.bullet {
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		margin: 0 5px 2px 0;
+	}
+	.level1 {
+		background: rgb(255, 187, 51);
+	}
+	.level2 {
+		background: rgb(255, 204, 102);
+	}
+	.level3 {
+		background: rgb(255, 238, 204);
+	}
+	.level4 {
+		background: rgb(153, 187, 204);
+	}
+	.level5 {
+		background: rgb(51, 102, 153);
+	}
+}
+.overlay {
+	top: -12px;
+	z-index: -100;
+}
+.tooltip {
+	min-width: 1px;
+	min-height: 14px;
+	position: absolute;
+	font: 12px Arial, sans-serif;
+	padding: 4px 8px;
+	border: 1px solid #333;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	display: none;
+}
+.england_map {
+	position: absolute;
+	left: 30px;
+}
+.london_map {
+	position: absolute;
+	top: 180px;
+}
+.source {
+	color: #777;
+	font-size: .6em;
+	margin-bottom: .3em;
+	clear: both;
+	padding: 1em 0;
+	text-align: right;
+	width: 600px;
+}
+.figures {
+	margin-top: -20px;
+	.column {
+		width: 280px;
+		float: left;
+	}
+}
+.spinner-container {
+  position: absolute;
+  width: 624px;
+  height: 600px;
+  top: 0;
+  z-index: -1;
+  &.spinner {
+	  background: url('../img/spinner.gif') no-repeat center;
+  }
+}
+
+@media only screen and (min-width: 600px){
+	.overlay {
+		position: absolute;
+	}
+	.london {
+		top: 240px;
+	}
+	.container {
+		position: static;
+		z-index: 0;
+		margin-top: 0;
+		img {
+			position: absolute;
+			top: -9999px;
+		}
+		.fallback {
+			position: absolute;
+			top: -9999px;
+		}
+		svg {
+			display: block;
+		}
+	}
+}

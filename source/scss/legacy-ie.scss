@@ -1,0 +1,13 @@
+$fix-mqs: 1024px;
+
+@import "main";
+
+img {
+	display: none;
+}
+.container .fallback {
+	display: block;
+}
+ul .bullet {
+	float: left;
+}
